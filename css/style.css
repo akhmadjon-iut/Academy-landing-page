@@ -96,22 +96,33 @@ main .who_parts {
 
 .why_table {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; }
 
 .choose_card {
   display: block;
   border: 2px solid #000;
   margin: 3rem;
-  width: 60%;
-  height: 30rem;
-  background-color: #fff; }
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  text-align: center; }
 
 h3, p {
   text-align: center; }
 
+.choose_card i {
+  font-size: 10rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #941010, #008172, #0127c0);
+  -webkit-background-clip: text;
+  color: transparent; }
+
 @media screen and (max-width: 425px) {
   h1, h2 {
     font-size: 3rem; }
+  h3 {
+    font-size: 2rem; }
   .header-container a {
     margin: 0; }
   .header-container li {
@@ -147,7 +158,16 @@ h3, p {
     font-size: 1.4rem; }
   .left_part img {
     width: 27rem;
-    height: 25rem; } }
+    height: 25rem; }
+  main .main_welcome {
+    padding: 15rem 0 15rem 0; }
+  .choose_card i {
+    font-size: 3rem; }
+  .why_table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .choose_card {
+    margin: 2rem 0 2rem 0; } }
 
 @media screen and (max-width: 768px) {
   h1, h2 {
@@ -160,7 +180,11 @@ h3, p {
   .left_part img {
     height: 25rem; }
   .right_part {
-    margin: 1.5rem; } }
+    margin: 1.5rem; }
+  h3 {
+    font-size: 2.5rem; }
+  p {
+    font-size: 1.5rem; } }
 
 @media screen and (max-width: 1024px) {
   h1, h2 {
@@ -177,7 +201,9 @@ h3, p {
   .left_part {
     margin-right: 3rem; }
   .right_part {
-    margin: 2rem; } }
+    margin: 2rem; }
+  .choose_card {
+    width: 80%; } }
 
 @media screen and (max-width: 1366px) {
   h1, h2 {
