@@ -76,9 +76,12 @@ main .who_parts {
 .left_part {
   margin-right: 20rem; }
 
-.right_part li {
+.right_part p {
   font-size: 3rem;
   margin: 3rem; }
+
+.right_part i {
+  color: #15ff00; }
 
 .right_part h2 {
   display: block;
@@ -118,6 +121,17 @@ h3, p {
   -webkit-background-clip: text;
   color: transparent; }
 
+.course_cards {
+  display: block; }
+
+.course_card {
+  text-align: center;
+  border: 3px solid #941010;
+  margin: 3rem; }
+
+.owl-nav {
+  font-size: 3rem; }
+
 @media screen and (max-width: 425px) {
   h1, h2 {
     font-size: 3rem; }
@@ -154,7 +168,7 @@ h3, p {
     max-width: 100%; }
   .who_parts {
     flex-direction: column; }
-  .right_part li {
+  .right_part p {
     font-size: 1.4rem; }
   .left_part img {
     width: 27rem;
@@ -174,7 +188,7 @@ h3, p {
     font-size: 3rem; }
   main .who_parts {
     padding: 7rem 0 7rem 0; }
-  .right_part li {
+  .right_part p {
     font-size: 1.8rem;
     margin: 2rem; }
   .left_part img {
@@ -189,7 +203,7 @@ h3, p {
 @media screen and (max-width: 1024px) {
   h1, h2 {
     font-size: 3rem; }
-  .right_part li {
+  .right_part p {
     font-size: 2rem; }
   .main-nav a {
     font-size: 1.3rem;
