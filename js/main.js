@@ -1,14 +1,15 @@
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
         loop: true,
-        nav: true,
-        dots: false,
-        autoplay: true,
+        dots: true,
+        
         navConteiner: true,
+        animateOut: 'fadeOut',
+
         responsive:{
             0:{
                 items:1,
-                dots: true,
             },
             768:{
                 items:2
@@ -21,6 +22,7 @@ $(document).ready(function(){
             }
         }
     });
+    
   });
 
 
