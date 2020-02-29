@@ -18,6 +18,9 @@ h1, h2 {
 h3 {
     font-size: 3rem;
 }
+h4 {
+    font-size: 2.2rem;
+}
 li {
     list-style: none;
     display: flex;
@@ -28,6 +31,10 @@ p {
 a {
     text-decoration: none;
     font-size: 1.8rem;
+}
+body {
+    max-width: 160rem;
+    margin: auto;
 }
 header {
     padding: 22px 0;
@@ -170,6 +177,7 @@ h3,p {
 .page-btn {
     display: flex;
     justify-content: center;
+    padding: 2rem;
 } 
 .btn {
     @include btn-mix;
@@ -178,31 +186,14 @@ h3,p {
     background: #17141d;
     color: rgb(184, 184, 184);
 }
-
-
-
-
-
-
-.container {
-    position: relative;
-    height: 3rem;
-    margin: 3rem;
-    top: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .card {
     height: 30rem;
     width: 25rem;
     background-color: #17141d;
     border-radius: 1rem;
-    box-shadow: -1rem 0 1rem #000;
-  /*   margin-left: -50px; */
+    box-shadow: 1rem 0 1rem $color-black;
     transition: 0.4s ease-out;
     position: relative;
-    left: -1.5rem;
      margin: 3rem;
 }
 .card:hover {
@@ -210,11 +201,7 @@ h3,p {
     transition: 0.4s ease-out;
 }
   
-.card:hover ~ .card {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-}
+
   
   .title {
     color: white;
@@ -255,30 +242,141 @@ h3,p {
     width: 180px;
     transition: 0.4s ease-out;
 }
-// .course_card {
-//     left: 1.5rem;
-// }
+
 .owl-stage-outer {
     right: 3rem;
 }
+.results h2,.page-headers h2, .our_team h2{
+    text-align: center;
+    padding: 2rem;
+}
+
+.team_card {
+    @include grid-set;
+}
+.card_t {
+    background-color: #2e3033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 5rem ;
+    box-shadow: .5rem .5rem .5rem .5rem rgba(0,0,0,0.2);
+}
+.card_t .back_image {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 56%, 0 73%);
+}
+.team_img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -20rem;
+    z-index: 999;
+}
+
+
+.news_page {
+    @include grid-set;
+}
+.news_card {
+    background-color: #941010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 5rem ;
+    box-shadow: .5rem .5rem .5rem .5rem rgba(0,0,0,0.2);
+}
+.news_card img {
+    position: relative;
+    width: 30rem;
+    height: 25rem;
+    transition: .5s;
+}
+.news_card p::before {
+    display: none;
+}
+.news_card img {
+    background-size: cover;
+}
+.news_card:hover img {
+    opacity: .2;
+}
+    
 
 
   
 
 
 
+@media screen and (max-width: 768px) {
+    h1,h2 {
+        font-size: 3rem;
+    }
+    main .who_parts {
+        padding: 7rem 0 7rem 0;
+    }
+    .right_part p {
+        font-size: 1.8rem;
+        margin: 2rem;
+    }
+    .left_part img {
+        height: 25rem;
+    }
+    .right_part {
+        margin: 1.5rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .team_card {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 1024px) {
+    h1,h2 {
+        font-size: 3rem;
+    }
+    .right_part p {
+        font-size: 2rem;
+    }
+    .main-nav a {
+        font-size: 1.3rem;
+        padding: .5rem 0;
+    }
+    .header-container {
+        height: 2rem;
+        align-content: center;
+        transform: translateY(-70%);
+    }
+    .left_part {
+        margin-right: 3rem;
+    }
+    .right_part {
+        margin: 2rem;
+    }
+    .choose_card {
+        width: 80%;
+    }
+    .team_card {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+}
+@media screen and (max-width: 1366px) {
+    h1,h2 {
+        font-size: 4rem;
+    }
+    
+}
 
 @media screen and (max-width: 425px) {
     h1,h2 {
@@ -348,70 +446,12 @@ h3,p {
     .choose_card {
         margin: 2rem 0 2rem 0;
     }
-    
-}
-@media screen and (max-width: 768px) {
-    h1,h2 {
-        font-size: 3rem;
+    .team_card {
+        grid-template-columns: repeat(1, 1fr);
     }
-    main .who_parts {
-        padding: 7rem 0 7rem 0;
-    }
-    .right_part p {
-        font-size: 1.8rem;
-        margin: 2rem;
-    }
-    .left_part img {
-        height: 25rem;
-    }
-    .right_part {
-        margin: 1.5rem;
-    }
-    h3 {
-        font-size: 3rem;
-    }
-    p {
-        font-size: 1.5rem;
+    .card_t {
+        margin: 2rem 0 2rem 0;
     }
 }
-@media screen and (max-width: 1024px) {
-    h1,h2 {
-        font-size: 3rem;
-    }
-    .right_part p {
-        font-size: 2rem;
-    }
-    .main-nav a {
-        font-size: 1.3rem;
-        padding: .5rem 0;
-    }
-    .header-container {
-        height: 2rem;
-        align-content: center;
-        transform: translateY(-70%);
-    }
-    .left_part {
-        margin-right: 3rem;
-    }
-    .right_part {
-        margin: 2rem;
-    }
-    .choose_card {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 1366px) {
-    h1,h2 {
-        font-size: 4rem;
-    }
-    
-}
-
-
-
-
-
-
-
 
 
