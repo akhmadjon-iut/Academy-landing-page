@@ -93,8 +93,8 @@ main .who_parts {
     font-size: 3rem;
     margin: 3rem;
 }
-.right_part i {
-    color: #15ff00;    
+i {
+    color: $color-icon;     
 }
 .right_part h2 {
     display: block;
@@ -293,9 +293,10 @@ h3,p {
 }
 .news_card img {
     position: relative;
-    width: 30rem;
+    width: 100%;
     height: 25rem;
     transition: .5s;
+    object-fit: cover;
 }
 .news_card p::before {
     display: none;
@@ -322,6 +323,9 @@ h3,p {
     text-align: left;
     padding: 1rem;
     display: flex;
+}
+.footer_info i {
+    color: $color-icon;
 }
     
 
@@ -395,7 +399,7 @@ h3,p {
     .choose_card {
         width: 80%;
     }
-    .team_card {
+    .team_card, .news_page {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
@@ -485,10 +489,11 @@ h3,p {
     .choose_card {
         margin: 2rem 0 2rem 0;
     }
-    .team_card {
+    .team_card, .news_page {
         grid-template-columns: repeat(1, 1fr);
+        margin: 0;
     }
-    .card_t {
+    .card_t, .news_card {
         margin: 2rem 0 2rem 0;
     }
     .map_frame {

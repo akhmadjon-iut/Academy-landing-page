@@ -88,8 +88,8 @@ main .who_parts {
   font-size: 3rem;
   margin: 3rem; }
 
-.right_part i {
-  color: #15ff00; }
+i {
+  color: #0fb900; }
 
 .right_part h2 {
   display: block;
@@ -280,9 +280,10 @@ h3, p {
 
 .news_card img {
   position: relative;
-  width: 30rem;
+  width: 100%;
   height: 25rem;
-  transition: .5s; }
+  transition: .5s;
+  object-fit: cover; }
 
 .news_card p::before {
   display: none; }
@@ -308,6 +309,9 @@ h3, p {
   text-align: left;
   padding: 1rem;
   display: flex; }
+
+.footer_info i {
+  color: #0fb900; }
 
 @media screen and (max-width: 768px) {
   h1, h2 {
@@ -354,7 +358,7 @@ h3, p {
     margin: 2rem; }
   .choose_card {
     width: 80%; }
-  .team_card {
+  .team_card, .news_page {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center; }
   .map iframe {
@@ -418,9 +422,10 @@ h3, p {
     grid-template-columns: repeat(2, 1fr); }
   .choose_card {
     margin: 2rem 0 2rem 0; }
-  .team_card {
-    grid-template-columns: repeat(1, 1fr); }
-  .card_t {
+  .team_card, .news_page {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0; }
+  .card_t, .news_card {
     margin: 2rem 0 2rem 0; }
   .map_frame {
     width: 30rem; }
