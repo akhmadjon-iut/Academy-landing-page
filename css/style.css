@@ -47,7 +47,7 @@ header {
   margin-right: 30px; }
 
 .header-container a:hover {
-  border-bottom: 3px solid #941010; }
+  border-bottom: 2px solid #941010; }
 
 .header-container ul {
   display: flex; }
@@ -270,7 +270,6 @@ h3, p {
   width: 100%; }
 
 .news_card {
-  background-color: #941010;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,6 +311,30 @@ h3, p {
 
 .footer_info i {
   color: #0fb900; }
+
+.subscribe {
+  display: flex;
+  justify-content: space-around;
+  background: url(/img/register.jpg); }
+
+.form-control {
+  width: 300px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #941010;
+  color: #000;
+  font-size: 2rem;
+  margin: 2rem; }
+
+.submit {
+  background-color: #0fb900; }
+
+.popular a {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  margin: 1.5rem; }
 
 @media screen and (max-width: 768px) {
   h1, h2 {
@@ -434,4 +457,6 @@ h3, p {
   .footer {
     flex-direction: column; }
   .map iframe {
-    padding: 0 0 0 0; } }
+    padding: 0 0 0 0; }
+  .popular {
+    display: none; } }
