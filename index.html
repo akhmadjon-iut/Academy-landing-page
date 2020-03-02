@@ -19,16 +19,15 @@
                 <img src="/img/academy.jpg" alt="">
             </div>
             <nav>
-                
                 <ul class="main-nav" id="myMain-nav">
-                <li><a href="#">Who we are?</a></li>
-                <li><a href="#">Why choose us?</a></li>
-                <li><a href="#">Most popular</a></li>
-                <li><a href="#">Results</a></li>
-                <li><a href="#">Our team</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Subscribe</a></li>
-                <li><a href="#">Location</a></li>
+                <li><a class="section-link" href="#who_we">Who we are?</a></li>
+                <li><a class="section-link" href="#why_we">Why choose us?</a></li>
+                <li><a class="section-link" href="#most_popular">Most popular</a></li>
+                <li><a class="section-link" href="#results">Results</a></li>
+                <li><a class="section-link" href="#our_team">Our team</a></li>
+                <li><a class="section-link" href="#news-page">News</a></li>
+                <li><a class="section-link" href="#subscribe">Subscribe</a></li>
+                <li><a class="section-link" href="#footer">Location</a></li>
                 <a href="#" id="menu" class="icon">&#9776</a>
                 </ul>
             </nav>
@@ -39,7 +38,7 @@
             <h1>Welcome to Academy!</h1>
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eum consequatur</P>
         </div>
-        <div class="who_we max-width">
+        <div class="who_we max-width" id="who_we">
             <div class="who_parts">
                 <div class="left_part">
                     <img src="/img/chairs.jpg" alt="chairs">
@@ -55,7 +54,7 @@
                 </div>      
             </div>
         </div>
-        <div class="why_we">
+        <div class="why_we" id="why_we">
             <div class="h2_txt">
                 <h2>Why choose us?</h2>
             </div>
@@ -92,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="most_popular">
+        <div class="most_popular" id="most_popular">
             <div class="course-page">
                 <div class="page-headers">
                     <h2>Most popular!</h2>
@@ -164,7 +163,7 @@
                 </div>
             </div>
         </div>
-        <div class="results">
+        <div class="results" id="results">
             <h2>Results</h2>
         <div class="container owl-carousel">
             <div class="card">
@@ -223,7 +222,7 @@
                 </div>
               </div>
           </div>
-          <div class="our_team">
+          <div class="our_team" id="our_team">
             <h2>Our Team!</h2>
               <div class="team_card">
                       <div class="card_t">
@@ -260,30 +259,38 @@
                 <button class="btn">All team</button>
             </div>
         </div>
-        <div class="news-page">
+        <div class="news-page" id="news-page">
             <div class="page-headers">
                 <h2 class="news">News</h2>
             </div>
             <div class="news_page">
                 <div class="news_card">
-                    <img src="/img/news1.jpg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                    <img src="/img/news1.jpg" class="news_img">
+                    <div class="news_par">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                        </div>
                 </div>
                 <div class="news_card">
-                    <img src="/img/news2.jpg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                    <img src="/img/news2.jpg" class="news_img">
+                    <div class="news_par">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                        </div>
                 </div>
                 <div class="news_card">
-                    <img src="/img/news1.jpg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque </p>
+                    <img src="/img/news1.jpg" class="news_img">
+                    <div class="news_par">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                        </div>
                 </div>
                 <div class="news_card">
-                    <img src="/img/news2.jpg">
+                    <img src="/img/news2.jpg" class="news_img">
+                    <div class="news_par">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et animi ex. Odit obcaecati eos incidunt repellendus nihil tempore iure doloremque</p>
+                    </div>  
                 </div>
             </div>
         </div>
-        <div class="subscribe">
+        <div class="subscribe" id="subscribe">
             <div class="submit_form">
                 <form action="" id="contect-form" method="post">
                     <input type="text" name="name" class="form-control" placeholder="Your Name" required><br>
@@ -302,7 +309,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer" id="footer">
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4236.59907524594!2d69.33229828929659!3d41.33652907565488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef48a8ed4d0e9%3A0x3772abeffc72e7b8!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNC90YXQsA!5e0!3m2!1sru!2s!4v1583007919868!5m2!1sru!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
