@@ -65,7 +65,7 @@ main {
   width: 100%; }
 
 main .main_welcome {
-  background: url(/img/header_back.jpg);
+  background: url(../img/header_back.jpg);
   text-align: center;
   background-size: cover;
   padding: 25rem 0 45rem 0; }
@@ -97,7 +97,7 @@ i {
   border-bottom: 0.4rem solid #941010; }
 
 .why_we {
-  background: url(/img/background-fon.jpeg);
+  background: url(../img/background-fon.jpeg);
   background-size: cover; }
 
 .h2_txt {
@@ -325,7 +325,7 @@ h3, p {
 .subscribe {
   display: flex;
   justify-content: space-around;
-  background: url(/img/register.jpg); }
+  background: url(../img/register.jpg); }
 
 .form-control {
   width: 300px;
