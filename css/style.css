@@ -32,28 +32,26 @@ body {
   max-width: 160rem;
   margin: auto; }
 
-header {
-  padding: 22px 0; }
-
 .header-container {
-  width: 90%;
+  position: fixed;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between; }
+  display: inline-flex;
+  justify-content: space-around;
+  background-color: #2e303398;
+  z-index: 11; }
 
 .header-container a {
-  color: #000;
+  color: #fff;
   padding: 10px 5px;
-  margin-right: 30px; }
+  margin-left: 3rem; }
 
 .header-container a:hover {
   border-bottom: 2px solid #941010; }
 
 .header-container ul {
   display: flex; }
-
-.main-nav .icon {
-  display: none; }
 
 .ul i {
   display: block;
@@ -69,6 +67,9 @@ main .main_welcome {
   text-align: center;
   background-size: cover;
   padding: 25rem 0 45rem 0; }
+
+.main_welcome p, h1 {
+  background-color: rgba(255, 255, 255, 0.596); }
 
 .who_we {
   width: 90%;
@@ -102,7 +103,7 @@ i {
 
 .h2_txt {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   color: #fff; }
 
 .why_table {
@@ -113,8 +114,8 @@ i {
 .choose_card {
   display: block;
   border: 2px solid #000;
-  margin: 3rem;
-  width: 60%;
+  margin: 2rem;
+  width: 70%;
   height: auto;
   background-color: #fff;
   text-align: center; }
@@ -125,7 +126,7 @@ h3, p {
 .choose_card i {
   font-size: 10rem;
   display: inline-block;
-  background-image: linear-gradient(to right, #941010, #008172, #0127c0);
+  background-image: linear-gradient(to right, #97efff, #ff8c8c, #751400);
   -webkit-background-clip: text;
   padding-top: .5rem;
   color: transparent; }
@@ -175,16 +176,16 @@ h3, p {
   border: 0.2rem solid #941010;
   border-radius: 3rem; }
 
-.course_card {
-  background: #17141d;
-  color: #b8b8b8; }
+.course_card, .course_card a {
+  border-color: #2e3033;
+  background-image: url(../img/grunge-background.jpg);
+  color: #ffffff; }
 
 .card {
   height: 30rem;
   width: 25rem;
-  background-color: #17141d;
+  background: url(../img/grunge-background.jpg);
   border-radius: 1rem;
-  box-shadow: 1rem 0 1rem #000;
   transition: 0.4s ease-out;
   position: relative;
   margin: 3rem; }
@@ -229,12 +230,20 @@ h3, p {
   width: 180px;
   transition: 0.4s ease-out; }
 
-.owl-stage-outer {
-  right: 3rem; }
+.checkbtn {
+  font-size: 3rem;
+  float: right;
+  line-height: 8rem;
+  margin-right: 4rem;
+  cursor: pointer;
+  display: none; }
+
+#check {
+  display: none; }
 
 .results h2, .page-headers h2, .our_team h2 {
   text-align: center;
-  padding: 2rem; }
+  padding: 1.5rem; }
 
 .team_card {
   display: grid;
@@ -242,7 +251,7 @@ h3, p {
   width: 100%; }
 
 .card_t {
-  background-color: #2e3033;
+  background-color: #e1eaec;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,7 +271,7 @@ h3, p {
   object-fit: cover;
   border-radius: 50%;
   margin-top: -20rem;
-  z-index: 999; }
+  z-index: 4; }
 
 .news_page {
   display: grid;
@@ -304,20 +313,20 @@ h3, p {
   padding: 16px 32px; }
 
 .map iframe {
-  width: 50rem;
-  padding: 5rem; }
+  width: 100%;
+  padding-top: 5rem; }
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-around; }
 
 .footer_info {
-  padding: 5rem; }
+  text-align: center;
+  margin-bottom: 5rem; }
 
 .footer_info a {
-  text-align: left;
-  padding: 1rem;
-  display: flex; }
+  padding: 1rem; }
 
 .footer_info i {
   color: #0fb900; }
@@ -349,6 +358,26 @@ h3, p {
 @media screen and (max-width: 768px) {
   h1, h2 {
     font-size: 3rem; }
+  .checkbtn {
+    display: block; }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #FDE8A8;
+    top: 8rem;
+    text-align: center;
+    transition: all .5s; }
+  nav ul li {
+    display: block;
+    line-height: 3rem; }
+  nav ul li a {
+    font-size: 3rem; }
+  a:hover, :active {
+    background: none;
+    color: #2e3033; }
+  #check:checked ~ ul {
+    left: 0; }
   main .who_parts {
     padding: 7rem 0 7rem 0; }
   .right_part p {
@@ -364,10 +393,6 @@ h3, p {
     font-size: 1.5rem; }
   .team_card {
     flex-direction: column; }
-  .map iframe {
-    width: 50rem;
-    height: 30rem;
-    padding: 0 0 5rem 5rem; }
   .footer_info {
     padding: 0 5rem 0 0; }
   .footer_info a {
@@ -382,9 +407,7 @@ h3, p {
     font-size: 1.3rem;
     padding: .5rem 0; }
   .header-container {
-    height: 2rem;
-    align-content: center;
-    transform: translateY(-70%); }
+    align-content: center; }
   .left_part {
     margin-right: 3rem; }
   .right_part {
@@ -393,9 +416,7 @@ h3, p {
     width: 80%; }
   .team_card, .news_page {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center; }
-  .map iframe {
-    width: 35rem; } }
+    justify-items: center; } }
 
 @media screen and (max-width: 1366px) {
   h1, h2 {
@@ -410,11 +431,6 @@ h3, p {
     margin: 0; }
   .header-container li {
     display: none; }
-  .main-nav a.icon {
-    float: right;
-    display: block;
-    color: #000;
-    font-size: 2.5rem; }
   .main-nav.responsive {
     position: relative;
     top: 5rem;
@@ -423,10 +439,6 @@ h3, p {
     display: block; }
   header .main-nav.responsive {
     height: 20rem; }
-  .main-nav.responsive a.icon {
-    position: absolute;
-    top: -5rem;
-    right: -5rem; }
   .main-nav.responsive li {
     float: none;
     display: block;
@@ -460,10 +472,6 @@ h3, p {
     margin: 0; }
   .card_t, .news_card {
     margin: 2rem 0 2rem 0; }
-  .map_frame {
-    width: 30rem; }
-  .map iframe {
-    width: 32rem; }
   .footer {
     flex-direction: column; }
   .map iframe {

@@ -36,19 +36,22 @@ body {
     max-width: 160rem;
     margin: auto;
 }
-header {
-    padding: 22px 0;
-}
+
 .header-container {
-    width: 90%;
+    position: fixed;
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: space-around;
+    background-color: #2e303398;
+    z-index: 11;
 }
 .header-container a {
-    color: $color-black;
-    padding: 10px 5px;
-    margin-right: 30px;
+    color: $color-white;
+    padding: 10px 5px; 
+    margin-left: 3rem;
+    
 }
 .header-container a:hover {
     border-bottom: 2px solid $color-red;
@@ -57,9 +60,7 @@ header {
 .header-container ul {
     display: flex;
 }
-.main-nav .icon {
-    display: none;
-}
+
 .ul i {
     display: block;
     font-size: 1rem;
@@ -70,10 +71,13 @@ main {
     width: 100%;
 }
 main .main_welcome {
-    background: url(/img/header_back.jpg);
+    background: url(../img/header_back.jpg);    
     text-align: center;
     background-size: cover;
     padding: 25rem 0 45rem 0 ;
+}
+.main_welcome p, h1 {
+    background-color: rgba(255, 255, 255, 0.596);
 }
 .who_we {
     width: 90%;
@@ -102,12 +106,12 @@ i {
     border-bottom: .4rem solid $color-red;
 }
 .why_we { 
-    background: url(/img/background-fon.jpeg);
+    background: url(../img/background-fon.jpeg);
     background-size: cover;
 }
 .h2_txt {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     color: $color-white;
 }
 .why_table {
@@ -118,8 +122,8 @@ i {
 .choose_card {
     display: block;
     border: 2px solid $color-black;
-    margin: 3rem;
-    width: 60%;
+    margin: 2rem;
+    width: 70%;
     height: auto;
     background-color: $color-white;
     text-align: center;
@@ -130,14 +134,13 @@ h3,p {
 .choose_card i {
     font-size: 10rem;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-red, rgb(0, 129, 114), #0127c0);
+    background-image: linear-gradient(to right, rgb(151, 239, 255), rgb(255, 140, 140), #751400);
     -webkit-background-clip: text;
     padding-top: .5rem;
     color: transparent;
 }
 .course_cards {
-    display: block;
-    
+    display: block;  
 }
 .course_card {
     text-align: center;
@@ -182,16 +185,16 @@ h3,p {
 .btn {
     @include btn-mix;
 }
-.course_card {
-    background: #17141d;
-    color: rgb(184, 184, 184);
+.course_card ,.course_card a {
+    border-color: #2e3033;
+    background-image: url(../img/grunge-background.jpg);
+    color: #ffffff;
 }
 .card {
     height: 30rem;
     width: 25rem;
-    background-color: #17141d;
+    background: url(../img/grunge-background.jpg);
     border-radius: 1rem;
-    box-shadow: 1rem 0 1rem $color-black;
     transition: 0.4s ease-out;
     position: relative;
      margin: 3rem;
@@ -203,7 +206,7 @@ h3,p {
   
 
   
-  .title {
+.title {
     color: white;
     font-weight: 20;
     position: relative;
@@ -242,20 +245,28 @@ h3,p {
     width: 180px;
     transition: 0.4s ease-out;
 }
-
-.owl-stage-outer {
-    right: 3rem;
+.checkbtn {
+    font-size: 3rem;
+    float: right;
+    line-height: 8rem;
+    margin-right: 4rem;
+    cursor: pointer;
+    display: none;
 }
+#check {
+    display: none;
+}
+
 .results h2,.page-headers h2, .our_team h2{
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .team_card {
     @include grid-set;
 }
 .card_t {
-    background-color: #2e3033;
+    background-color: #e1eaec;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,7 +286,7 @@ h3,p {
     object-fit: cover;
     border-radius: 50%;
     margin-top: -20rem;
-    z-index: 999;
+    z-index: 4;
 }
 
 
@@ -318,20 +329,20 @@ h3,p {
     padding: 16px 32px;
 }
 .map iframe{
-    width: 50rem;
-    padding: 5rem;
+    width: 100%;
+    padding-top: 5rem;
 }
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 .footer_info {
-    padding: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
 }
 .footer_info a {
-    text-align: left;
     padding: 1rem;
-    display: flex;
 }
 .footer_info i {
     color: $color-icon;
@@ -339,7 +350,7 @@ h3,p {
 .subscribe {
     display: flex;
     justify-content: space-around;
-    background: url(/img/register.jpg);
+    background: url(../img/register.jpg);
 }
 .form-control{
     width: 300px;
@@ -373,6 +384,32 @@ h3,p {
     h1,h2 {
         font-size: 3rem;
     }
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #FDE8A8;
+        top: 8rem;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        line-height: 3rem;
+    }
+    nav ul li a {
+        font-size: 3rem;
+    }
+    a:hover,:active {
+        background: none;
+        color: #2e3033;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
     main .who_parts {
         padding: 7rem 0 7rem 0;
     }
@@ -395,12 +432,12 @@ h3,p {
     .team_card {
         flex-direction: column;
     }
-    .map iframe{
-        width: 50rem;
-        height: 30rem;
-        padding: 0 0 5rem 5rem;
+    // .map iframe{
+    //     width: 50rem;
+    //     height: 30rem;
+    //     padding: 0 0 5rem 5rem;
     
-    }
+    // }
     .footer_info {
         padding: 0 5rem 0 0;
     }
@@ -421,9 +458,7 @@ h3,p {
         padding: .5rem 0;
     }
     .header-container {
-        height: 2rem;
         align-content: center;
-        transform: translateY(-70%);
     }
     .left_part {
         margin-right: 3rem;
@@ -438,9 +473,9 @@ h3,p {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
-    .map iframe {
-        width: 35rem;
-    }
+    // .map iframe {
+    //     width: 35rem;
+    // }
 
 }
 @media screen and (max-width: 1366px) {
@@ -463,12 +498,6 @@ h3,p {
     .header-container li {
         display: none;   
     }
-    .main-nav a.icon {
-        float: right;
-        display: block;
-        color: #000;
-        font-size: 2.5rem;
-    }
     .main-nav.responsive {
         position: relative;
         top: 5rem;
@@ -478,11 +507,6 @@ h3,p {
     }
     header .main-nav.responsive {
         height: 20rem;
-    }
-    .main-nav.responsive a.icon{
-        position: absolute;
-        top: -5rem;
-        right: -5rem;
     }
     .main-nav.responsive li {
         float: none;
@@ -531,12 +555,12 @@ h3,p {
     .card_t, .news_card {
         margin: 2rem 0 2rem 0;
     }
-    .map_frame {
-        width: 30rem;
-    }
-    .map iframe {
-        width: 32rem;
-    }
+    // .map_frame {
+    //     width: 30rem;
+    // }
+    // .map iframe {
+    //     width: 32rem;
+    // }
     .footer {
         flex-direction: column;
     }
