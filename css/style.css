@@ -71,9 +71,12 @@ main .main_welcome {
 .main_welcome p, h1 {
   background-color: rgba(255, 255, 255, 0.596); }
 
-.who_we {
+.who_we .who_parts {
   width: 90%;
   margin: 0 auto; }
+
+.who_we {
+  background-image: url(../img/bg_about.png); }
 
 .left_part img {
   height: 40rem; }
@@ -124,7 +127,7 @@ h3, p {
   text-align: center; }
 
 .choose_card i {
-  font-size: 10rem;
+  font-size: 7rem;
   display: inline-block;
   background-image: linear-gradient(to right, #97efff, #ff8c8c, #751400);
   -webkit-background-clip: text;
@@ -138,8 +141,8 @@ h3, p {
   text-align: center;
   border: 2px solid #000;
   border-radius: 1rem;
-  margin: 3rem;
-  height: 32rem; }
+  margin: 2rem;
+  height: 30rem; }
 
 .course_card:hover {
   transform: translateY(-20px);
@@ -326,10 +329,8 @@ h3, p {
   margin-bottom: 5rem; }
 
 .footer_info a {
-  padding: 1rem; }
-
-.footer_info i {
-  color: #0fb900; }
+  padding: 1rem;
+  font-size: 3rem; }
 
 .subscribe {
   display: flex;
@@ -346,8 +347,12 @@ h3, p {
   font-size: 2rem;
   margin: 2rem; }
 
-.submit {
-  background-color: #0fb900; }
+.submit:hover {
+  background-color: #FDE8A8; }
+
+.subbmit_form {
+  background: #2e3033;
+  opacity: .8; }
 
 .popular a {
   display: flex;
@@ -412,8 +417,6 @@ h3, p {
     margin-right: 3rem; }
   .right_part {
     margin: 2rem; }
-  .choose_card {
-    width: 80%; }
   .team_card, .news_page {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center; } }
@@ -461,7 +464,7 @@ h3, p {
   .filledbar {
     top: 0; }
   .choose_card i {
-    font-size: 3rem; }
+    font-size: 2.5em; }
   .why_table {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
