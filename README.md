@@ -1,4 +1,3 @@
 # Academy-landing-page
 
-![alt text] (https://github.com/akhmadjon-iut/Academy-landing-page/blob/master/img/background-fon.jpeg)
-![Uploading 84388946650355.585cef530160b.png…]()
+![aniket-deole-HWK1zd0OxUU-unsplash](https://user-images.githubusercontent.com/33801241/138087462-01565aaf-abec-4819-b46e-dd4657b83c85.jpg)
